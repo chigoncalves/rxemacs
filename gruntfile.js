@@ -13,7 +13,9 @@ module.exports = function (grunt) {
     csslint: {
       strict: {
 	options: {
-	  import: 2
+	  import: 2,
+	  formatters: ['compact'],
+	  csslintrc: '.csslintrc',
 	},
 	src: ['*.css']
       }
@@ -21,7 +23,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
       src: ['*.css'],
-      dest: 'gen/styles.concat.css',
+      dest: 'cache/styles.concat.css',
     },
     }
 
@@ -29,6 +31,6 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks ('grunt-contrib-cssmin');
   grunt.loadNpmTasks ('grunt-contrib-concat');
-
+  grunt.loadNpmTasks ('grunt-contrib-csslint');
   grunt.registerTask ('default', ['csslint']);
 };
