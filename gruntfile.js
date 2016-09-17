@@ -17,12 +17,18 @@ module.exports = function (grunt) {
 	},
 	src: ['*.css']
       }
+    },
+    concat: {
+      dist: {
+      src: ['*.css'],
+      dest: 'gen/styles.concat.css',
+    },
     }
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks ('grunt-contrib-cssmin');
+  grunt.loadNpmTasks ('grunt-contrib-concat');
 
-  grunt.registerTask ('default', ['cssmin', 'csslint']);
+  grunt.registerTask ('default', ['csslint']);
 };

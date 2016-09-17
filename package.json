@@ -1,0 +1,23 @@
+{
+  "name": "rxemacs",
+  "version": "0.0.1",
+  "description": "A theme for r/xemacs",
+  "keywords": [
+    "reddit",
+    "css",
+    "theme",
+    "xemacs",
+    "emacs",
+    "lisp"
+  ],
+  "author": "chigoncalves",
+  "url": "https://www.reddit.com/r/xemacs/new",
+  "repository": "https://github.com/chigoncalves/rxemacs",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2"
+  }
+}
